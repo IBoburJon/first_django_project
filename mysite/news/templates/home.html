@@ -1,0 +1,80 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">  
+<title>Tipa Kun.uz by I_BoburJon</title>
+<link rel="stylesheet" href="{% static 'news/style_home.css' %}">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="{% url 'home' %}">Tipa Kun.uz</a></h1>
+			<p>{% trans "Design by" %} I_BoburJon</a></p>
+			
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a>{% trans "Hello" %}, {{request.user}}</a></li>
+				<li><a href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
+			</ul>
+		</div>
+		<div id="new_record">
+			<h3><a id="a_header" href="{% url 'add' %}">{% trans "Add New Record" %}</a></h3>
+			<form action="{% url 'set_language' %}" method="post">
+				{% csrf_token %}
+				{% get_current_language as LANGUAGE_CODE %}
+				{% get_available_languages as LANGUAGES %}
+				{% get_language_info_list for LANGUAGES as languages %}
+	
+				<div class="navigation_dropdown lang_dropdown">
+					<ul class="nav navbar-nav navbar-right language menu">
+						{% for language in languages %}
+							<li>
+								<button type="submit"
+										name="language"
+										value="{{ language.code }}"
+										class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+									{{ language.name_local }}
+								</button>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</form>
+		</div>			
+		
+	</div>
+	<!-- end #header -->
+	{% block content %}
+
+	{% endblock content %}
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div id="footer-bg" class="container">
+		<div id="column1">
+			<h2>{% trans "Welcome to my website" %}</h2>
+			<p>{% trans "This Made by" %} I_BoburJon</p>
+		</div>
+		<div id="column2">
+			<h2>{% trans "Welcome to" %} Tipa kun.uz)))</h2>
+			<p>{% trans "This Made by" %} Django framework</p>
+		</div>
+		<div id="column3">
+			<h2>{% trans "Recommended Links" %}</h2>
+			<ul>
+				<li><a id="a_footer" href="{% url 'home' %}">{% trans "Home" %}</a></li>
+			</ul>
+		</div>
+	</div>	
+</div>
+<div id="footer">
+	<p>&copy; Tipa Kun.uz... All rights reserved. Design by I_BoburJon</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

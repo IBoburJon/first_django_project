@@ -1,0 +1,61 @@
+{% extends "home.html" %}
+{% load i18n %}
+
+{% block content %}
+
+
+<style>
+	#page {
+	width: 900px;
+	height: 383px;
+	margin: 0 auto;
+	padding: 30px 30px;
+	background-color: white;
+}
+
+#forbutton{
+	color: black;
+    border: ridge;
+}
+</style>
+
+	<!-- end #header -->
+    <div id="page">
+        <form method="POST" action="/update/{{post.id}}">  
+            {% csrf_token %}  
+        <div style="text-align: center;">  
+    <br>  
+            <div>  
+                <div>  
+                    <h3>{% trans 'Update Details' %}</h3>  
+                </div>  
+            </div>  
+            <div>  
+                <label">{% trans 'Title' %}:</label>  
+                <div>  
+                    <input type="char" name="title" id="id_title" required maxlength="250" value="{{ post.title }}"/>
+                </div>  
+            </div>   
+            <div>  
+                <label>{% trans 'Body' %}:</label>  
+                <div>  
+                    <input type="text" name="body" id="id_body" required maxlength="1000" value="{{ post.body }}" />  
+                </div>  
+            </div>
+            <div>  
+                <label>{% trans 'Detail' %}:</label>  
+                <div>  
+                    <input type="text" name="detail" id="id_detail" required maxlength="1000" value="{{ post.detail }}" />  
+                </div>  
+            </div>  
+            <div>
+                <div>  
+                <button id="forbutton" type="submit">{% trans 'Update' %}</button>  
+                </div>
+            </div>  
+        </div>  
+    </form>
+    </div>
+	<!-- end #page -->
+
+{% endblock %}

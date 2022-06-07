@@ -1,0 +1,18 @@
+{% extends "home.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<div id="page">
+		
+    <div class="post">
+        <h2>{{ posts.title }}</h2>
+        <h3 style="font-weight: bold;">{{ posts.body }}</h3>
+        <p>{{ posts.detail|linebreaks }}</p>
+        <p style="text-align: right;">
+            <a href="/edit/{{ posts.id }}">{% trans "Edit" %}</a>
+            <a href="/delete/{{ posts.id }}">{% trans "Delete" %}</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

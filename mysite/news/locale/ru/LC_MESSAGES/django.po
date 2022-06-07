@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-22 19:02+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\templates\add.html:31
+msgid "Enter Details"
+msgstr "Введите Детали"
+
+#: .\templates\add.html:35 .\templates\edit.html:34
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\templates\add.html:41 .\templates\edit.html:40
+msgid "Body"
+msgstr "Боди"
+
+#: .\templates\add.html:47 .\templates\edit.html:46
+msgid "Detail"
+msgstr "Детали"
+
+#: .\templates\add.html:54
+msgid "Submit"
+msgstr "Разместить"
+
+#: .\templates\edit.html:30
+msgid "Update Details"
+msgstr "Обновить Детали"
+
+#: .\templates\edit.html:53
+msgid "Update"
+msgstr "Обновить"
+
+#: .\templates\home.html:16
+msgid "Design by"
+msgstr "Разработал"
+
+#: .\templates\home.html:21
+msgid "Hello"
+msgstr "Здравствуйте"
+
+#: .\templates\home.html:22
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\templates\home.html:26
+msgid "Add New Record"
+msgstr "Добавить новую запись"
+
+#: .\templates\home.html:60
+msgid "Welcome to my website"
+msgstr "Добро пожаловать на мой сайт"
+
+#: .\templates\home.html:61 .\templates\home.html:65
+msgid "This Made by"
+msgstr "Это сделал"
+
+#: .\templates\home.html:64 .\templates\newsdata.html:9
+msgid "Welcome to"
+msgstr "Добро пожаловать в"
+
+#: .\templates\home.html:68
+msgid "Recommended Links"
+msgstr "Рекомендуемые ссылки"
+
+#: .\templates\home.html:70
+msgid "Home"
+msgstr "Дом"
+
+#: .\templates\login.html:14
+msgid "Login Form"
+msgstr "Логин Форма"
+
+#: .\templates\login.html:21 .\templates\register.html:23
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\templates\login.html:24 .\templates\register.html:27
+msgid "Password"
+msgstr "Пароль"
+
+#: .\templates\login.html:26 .\templates\register.html:41
+msgid "Login"
+msgstr "Вход"
+
+#: .\templates\login.html:38
+msgid "Sign up for free!"
+msgstr "Регистрируйтесь бесплатно!"
+
+#: .\templates\login.html:38
+msgid "Signup"
+msgstr "Регистрация"
+
+#: .\templates\newsdata.html:17
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\templates\newsdata.html:18
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\pagination.html:5
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: .\templates\pagination.html:13
+msgid "Next"
+msgstr "Следующий"
+
+#: .\templates\register.html:16
+msgid "Registration Form"
+msgstr "Форма регистрации"
+
+#: .\templates\register.html:31
+msgid "Re-enter Password"
+msgstr "Повторно введите пароль"
+
+#: .\templates\register.html:33
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: .\templates\register.html:41
+msgid "Already Have an account?"
+msgstr "Уже есть учетная запись?"
+
+#, fuzzy
+#~| msgid "Design by"
+#~ msgid "Design by I_BoburJon"
+#~ msgstr "Разработал"

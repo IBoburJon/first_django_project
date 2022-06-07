@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<div id="page">
+		
+    <div class="post">
+        <h2 style="text-align: center;"><a href="#">{% trans "Welcome to" %} Tipa Kun.uz... </a></h2>
+
+        <div>
+            {% for post in posts %}
+            <div>
+                <h2 style="padding: 20px 0px 0px 0px;"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                <p>{{post.body}}</p>
+            </div>
+            <h3>_____________________________________________________________________________________________________</h3>
+            {% endfor %}
+        </div>
+        <div>
+            <h3 style="text-align: center; padding: 40px 0px 0px 0px;">{% include "pagination.html" with page=posts %}</h3>
+        </div>
+        
+
+<div style="clear: both;">&nbsp;</div>
+</div>
+
+
+{% endblock %}

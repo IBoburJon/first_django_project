@@ -1,0 +1,61 @@
+{% extends "home.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<style>
+	#page {
+	width: 900px;
+	height: auto;
+	margin: 0 auto;
+	padding: 30px 30px;
+	background-color: white;
+}
+
+#forbutton{
+	color: black;
+    border: ridge;
+}
+
+</style>
+
+	<!-- end #header -->
+	<div id="page">
+		
+        <form method="POST" action="">  
+            {% csrf_token %}  
+        <div style="text-align: center;">  
+    <br>  
+            <div>
+                <div>
+                    <h3>{% trans 'Enter Details' %}</h3> 
+                </div>
+            </div>  
+            <div> 
+                <label">{% trans 'Title' %}:</label> 
+                <div>  
+                    {{ form.title }}  
+                </div>  
+            </div>   
+            <div> 
+                <label">{% trans 'Body' %}:</label>
+                <div>  
+                    {{ form.body }}  
+                </div>  
+            </div>
+            <div> 
+                <label">{% trans 'Detail' %}:</label>
+                <div>  
+                    {{ form.detail }}  
+                </div>  
+            </div>
+            <div>
+                <div class="col-sm-4">  
+                    <button id="forbutton" type="submit">{% trans 'Submit' %}</button>  
+                </div>  
+            </div>  
+        </div>  
+    </form>
+	</div>
+
+{% endblock %}
